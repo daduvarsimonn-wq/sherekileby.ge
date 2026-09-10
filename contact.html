@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Rustic Spoon - Contact & Reservations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">The Rustic Spoon</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html" class="active">Reservations & Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1 style="text-align: center; margin-bottom: 2rem;">Book a Table or Get in Touch</h1>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;">
+            <!-- Reservation Form -->
+            <div>
+                <h3 style="margin-bottom: 1rem;">Make a Reservation</h3>
+                <form id="reservation-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date & Time</label>
+                        <input type="datetime-local" id="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Number of Guests</label>
+                        <select id="guests">
+                            <option value="1">1 Person</option>
+                            <option value="2" selected>2 People</option>
+                            <option value="3">3 People</option>
+                            <option value="4">4 People</option>
+                            <option value="5+">5+ People</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn">Confirm Reservation</button>
+                </form>
+            </div>
+
+            <!-- Contact Information -->
+            <div>
+                <h3 style="margin-bottom: 1rem;">Visit Us</h3>
+                <p style="margin-bottom: 0.5rem;"><strong>Address:</strong> 123 Culinary Ave, Foodtown, FL 12345</p>
+                <p style="margin-bottom: 0.5rem;"><strong>Phone:</strong> (555) 123-4567</p>
+                <p style="margin-bottom: 1.5rem;"><strong>Email:</strong> info@therusticspoon.com</p>
+
+                <h3 style="margin-bottom: 1rem;">Opening Hours</h3>
+                <p style="margin-bottom: 0.5rem;">Tuesday – Thursday: 5:00 PM – 10:00 PM</p>
+                <p style="margin-bottom: 0.5rem;">Friday – Saturday: 5:00 PM – 11:00 PM</p>
+                <p style="margin-bottom: 1.5rem;">Sunday: 4:00 PM – 9:00 PM (Monday Closed)</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 The Rustic Spoon. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Simple JavaScript confirmation simulation for the reservation form
+        document.getElementById('reservation-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you! Your reservation request has been submitted successfully.');
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>
